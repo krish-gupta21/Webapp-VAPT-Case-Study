@@ -20,7 +20,8 @@ The objective was to identify security weaknesses, understand their impact, and 
 ### 🔴 1. Credential Exposure (Critical)
 Sensitive authentication tokens were found to be exposed in application responses, appearing in headers and response bodies of unprivileged requests.
 
-* **Impact:** * Full account takeover.
+* **Impact:**
+    * Full account takeover.
     * Unauthorized access to private user data.
     * Long-term session compromise.
 
@@ -31,20 +32,23 @@ User input was not properly sanitized before being stored in the database, allow
     ```html
     <script>alert('XSS_Vulnerability_Confirmed')</script>
     ```
-* **Impact:** * Session hijacking via cookie theft.
+* **Impact:**
+    * Session hijacking via cookie theft.
     * Credential theft through fake login overlays.
     * Malicious script injection.
 
 ### 🟡 3. Broken Access Control
 Certain endpoints lacked proper authorization validation, allowing low-privileged users to access restricted resources or administrative functions.
 
-* **Impact:** * Unauthorized access to restricted resources.
+* **Impact:**
+    * Unauthorized access to restricted resources.
     * Exposure of sensitive system configurations.
 
 ### 🔵 4. Sensitive Data Exposure
 Application responses included sensitive user-related data (PII) without proper encryption or masking.
 
-* **Impact:** * Privacy breaches and compliance risks.
+* **Impact:**
+    * Privacy breaches and compliance risks.
     * Data scraping vulnerabilities.
 
 ---
